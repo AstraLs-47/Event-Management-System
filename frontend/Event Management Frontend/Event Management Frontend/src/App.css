@@ -1,0 +1,164 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Layout helpers used by multiple components */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* HERO / First full-screen card */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: #f5f5f5;
+  color: #222;
+  padding: 6rem 0;
+}
+.hero h1 {
+  font-size: 3.2rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.05;
+}
+.hero .accent {
+  display: block;
+  color: #b83b36;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+.hero .sub {
+  color: #666;
+  max-width: 760px;
+  margin: 1rem auto 1.6rem;
+  font-size: 1rem;
+}
+.btn-primary {
+  background: #b83b36;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+}
+
+/* WHY section cards */
+.why-section {
+  padding: 4rem 0;
+  background: #fff;
+  color: #222;
+}
+.why-section h2 {
+  margin-bottom: 0.25rem;
+}
+.why-cards {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+.why-card {
+  flex: 1 1 0;
+  padding: 1.6rem;
+  border-radius: 10px;
+}
+.why-card.light {
+  background: #fbfbfb;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+.why-card.outlined {
+  background: #fff;
+  border: 2px solid rgba(184,59,54,0.25);
+}
+.why-card h4 {
+  margin-top: 0;
+}
+
+/* HOW IT WORKS */
+.how {
+  background: #f5f5f5; /* match hero holder color */
+  padding: 6rem 0; /* larger vertical spacing like hero */
+  color: #222;
+}
+.how h2 { margin-bottom: 0.25rem; }
+.steps {
+  display: flex;
+  gap: 1.6rem;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+.step {
+  background: #fff;
+  padding: 2rem 1.8rem;
+  border-radius: 10px;
+  flex: 1 1 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  text-align: center; /* center icon and headings */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(184,59,54,0.04);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  border: 1px solid rgba(184,59,54,0.08);
+}
+.step h4 {
+  margin: 0.25rem 0 0.6rem;
+  white-space: nowrap; /* keep quick link heading on one line */
+  font-weight: 700;
+}
+.step p { margin: 0; color: #666; }
+
+@media (max-width: 900px) {
+  .why-cards, .steps { flex-direction: column; }
+  .hero h1 { font-size: 2rem; }
+}

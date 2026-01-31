@@ -1,0 +1,434 @@
+:root{
+  --accent:#b33a36;
+  --muted:#777;
+  --container:1100px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, Arial, sans-serif;margin:0;color:#222;background:#fff}
+.container{max-width:var(--container);margin:0 auto;padding:40px 20px}
+.site-header{border-bottom:1px solid #eee;background:#fff;position:sticky;top:0;z-index:10;min-height:64px}
+.header-inner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;padding:14px 0}
+.brand{color:var(--accent);font-weight:700;text-align:left;justify-self:start}
+.nav{justify-self:center}
+.nav button{margin:0 10px;color:#333;background:none;border:none;cursor:pointer}
+.nav .nav-link{margin:0 10px;color:#333;background:none;border:none;cursor:pointer;padding:6px 8px;font-weight:600;border-radius:4px}
+.nav .nav-link.active{color:var(--accent);position:relative}
+.nav .nav-link.active::after{content:'';display:block;height:3px;background:var(--accent);border-radius:3px;width:100%;margin-top:6px}
+.nav a{margin:0 12px;color:#333;text-decoration:none}
+.login-btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;border:none}
+.signup-btn{border:1px solid var(--accent);color:var(--accent);padding:8px 10px;border-radius:6px;background:#fff}
+.profile-btn{width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;border:none;display:inline-flex;align-items:center;justify-content:center;font-weight:700}
+.logout-btn{background:none;border:1px solid #ddd;padding:6px 8px;border-radius:6px;margin-left:6px}
+.profile-outline{width:38px;height:38px;border-radius:50%;background:transparent;color:var(--accent);border:2px solid rgba(179,58,54,0.12);display:inline-flex;align-items:center;justify-content:center;padding:4px}
+.add-event{background:transparent;border:1px solid var(--accent);color:var(--accent);padding:8px 10px;border-radius:6px}
+.hero{padding:110px 20px 90px;text-align:center;background:#f7f7f7;border-bottom:1px solid #eee}
+.hero h1{font-size:40px;margin:0 0 6px;font-weight:800}
+.hero .accent{color:var(--accent);display:block;margin-top:6px;font-size:40px}
+.hero .sub{color:var(--muted);max-width:760px;margin:10px auto 18px}
+.btn-primary{background:var(--accent);color:#fff;border:none;padding:12px 22px;border-radius:6px;margin-top:12px}
+.how{padding:110px 20px 90px;text-align:center;background:#f7f7f7;border-bottom:1px solid #eee}
+.how .steps{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap;margin-top:20px}
+.step{background:#fff;padding:20px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);flex:1;min-width:220px}
+.step .icon{font-size:26px;margin-bottom:8px;color:var(--accent)}
+
+/* Why section */
+.why-section{padding:40px 20px;text-align:center}
+.why-section h2{font-size:34px;margin-bottom:8px;font-weight:700}
+.why-section .small{max-width:700px;margin:0 auto 18px;color:var(--muted)}
+.why-cards{display:flex;gap:28px;justify-content:center;align-items:stretch;margin-top:24px}
+.why-card{flex:0 0 320px;padding:18px;border-radius:8px}
+.why-card.light{background:#faf8f8;border:1px solid #f0eaea}
+.why-card.outlined{background:#fff;border:2px solid rgba(179,58,54,0.15);box-shadow:0 1px 0 rgba(179,58,54,0.03)}
+.why-card h4{margin:0 0 10px;color:var(--accent)}
+.why-card ul{list-style:disc;padding-left:18px;margin:6px 0 0;color:#666;text-align:left}
+.highlights{text-align:center;padding:60px 20px}
+.highlights h2{font-size:34px;margin-bottom:6px}
+.highlights .lead{color:var(--muted);max-width:900px;margin:0 auto 30px}
+.highlights .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.highlights .card img{width:100%;height:220px;object-fit:cover;border-radius:18px;display:block}
+.events{padding:30px 20px}
+.event-list{display:flex;flex-direction:column;gap:16px;margin-top:20px;max-width:820px;margin-left:auto;margin-right:auto}
+.event-item{display:flex;gap:18px;align-items:flex-start;background:#fff;padding:20px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.06);border:1px solid #f0f0f0}
+.thumb{width:240px;height:200px;background:#ddd;border-radius:8px;object-fit:cover;flex-shrink:0}
+.info{display:flex;flex-direction:column;justify-content:center}
+.info h4{margin:0 0 6px}
+.cat{font-size:12px;color:var(--accent);margin-bottom:8px;display:inline-block;padding:6px 8px;border-radius:6px;background:rgba(179,58,54,0.06)}
+.meta{color:var(--muted);font-size:14px;display:flex;flex-direction:column;gap:6px}
+.meta .location, .meta .date, .meta .time, .meta .contact{margin:0}
+.meta .location{font-weight:700;color:#333}
+.desc{margin-top:10px;color:#333;line-height:1.45}
+.contact{font-size:13px;color:var(--muted)}
+
+.site-footer{background:#f6f6f6;padding-top:30px;margin-top:40px}
+.footer-inner{display:flex;gap:24px;justify-content:space-between;align-items:flex-start}
+.footer-inner h4{margin:0 0 10px}
+.links{list-style:none;padding:0;margin:0}
+.links li{margin-bottom:8px}
+.links a{color:#333;text-decoration:none}
+.bottom{text-align:center;padding:12px 0;color:var(--muted);font-size:13px}
+
+.join-band{background:var(--accent);color:#fff;padding:36px 0;text-align:center;margin-top:40px}
+.join-band h3{margin:0 0 6px}
+.join-band p{margin:0;color: #f6dede}
+
+/* inline form messages for success/error */
+.form-message{padding:10px 12px;border-radius:6px;font-weight:600}
+.form-message.success{background:rgba(0,128,0,0.06);color:green;border:1px solid rgba(0,128,0,0.12)}
+.form-message.error{background:rgba(255,0,0,0.04);color:#b33a36;border:1px solid rgba(179,58,54,0.08)}
+
+/* Profile card used on profile page to frame user info */
+.profile-card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.06);border:1px solid #f0f0f0}
+.profile-card .profile-top{display:flex;align-items:center;gap:16px}
+.profile-card .avatar{width:120px;height:120px;border-radius:999px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#eee}
+.profile-card h2{margin:0}
+.profile-card .user-info p{margin:6px 0;color:#333}
+
+/* About page tweaks */
+.about-hero{padding-top:40px;padding-bottom:40px}
+.about-section .about-container{max-width:880px;margin:0 auto}
+.about-purpose{background:#fff;padding:18px;border-radius:10px;border:1px solid rgba(0,0,0,0.04);box-shadow:0 8px 20px rgba(0,0,0,0.04)}
+.about-purpose h3{margin-top:0}
+.help-list{display:flex;flex-direction:column;gap:12px}
+.help-card{background:#fff;padding:14px;border-radius:10px;border:1px solid rgba(179,58,54,0.06);box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.help-card strong{display:block;margin-bottom:6px}
+
+@media(max-width:900px){
+  .why-cards{flex-direction:column;align-items:center}
+}
+
+/* Wider card used for add-event and edit forms — broader like the reference */
+.auth-box{background:#fff;padding:28px;border-radius:12px;max-width:760px;margin:24px auto;box-shadow:0 10px 30px rgba(0,0,0,0.06);text-align:left;border:1px solid #f0f0f0}
+
+/* Ensure each form field in .auth-box stacks vertically */
+.auth-box .form-row{display:block;margin-bottom:14px}
+.auth-box .form-row label{display:block;margin-bottom:8px;color:#333}
+.auth-box .form-row input,
+.auth-box .form-row textarea,
+.auth-box .form-row input[type="file"]{width:100%;box-sizing:border-box}
+
+/* Center login / signup pages */
+.login-page{max-width:900px;margin:60px auto 0;text-align:left;padding:28px 20px}
+.login-page h2{font-size:30px;margin-bottom:12px;text-align:center}
+.login-page .muted{margin-bottom:22px;text-align:center;color:var(--muted);max-width:720px;margin-left:auto;margin-right:auto}
+.login-page{background:transparent}
+
+/* Make the login/signup card narrower to match the reference */
+.login-page .auth-box{max-width:420px;margin:40px auto 0;padding:28px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.06)}
+.login-page .auth-box label{display:block;margin-bottom:12px;color:#333}
+.login-page .auth-box input{width:100%;padding:10px;border:1px solid #e6e6e6;border-radius:6px;margin-top:6px}
+.login-page .auth-box textarea{width:100%;min-height:100px;padding:10px;border:1px solid #e6e6e6;border-radius:6px;margin-top:6px}
+/* Make login button same width as inputs inside login card */
+.login-page .auth-box .btn-primary{display:block;width:100%;box-sizing:border-box;padding:12px;border-radius:6px}
+
+/* Add styling for add-event form action buttons so both together match input width */
+.auth-box .form-actions{display:flex;gap:10px;margin-top:12px;width:100%}
+.auth-box .form-actions .btn-primary{flex:2;margin:0;padding:12px 14px}
+.auth-box .form-actions .link-btn{flex:1;background:#f5f5f5;border:1px solid #e6e6e6;color:#333;border-radius:6px;padding:10px 12px;margin:0}
+.auth-box .form-actions .link-btn:hover{background:#eee}
+
+/* Action button box used on profile cards */
+.action-box{display:flex;gap:8px;border-radius:8px;padding:6px;background:#fff;border:1px solid rgba(0,0,0,0.06);box-shadow:0 4px 12px rgba(0,0,0,0.04)}
+.action-btn{background:transparent;border:none;padding:6px 10px;border-radius:6px;cursor:pointer;color:var(--accent);font-weight:600}
+.action-btn.danger{color:#b33a36;border-left:1px solid rgba(179,58,54,0.06);padding-left:12px}
+
+/* Confirmation modal */
+.confirm-modal{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,0.35);display:flex;align-items:center;justify-content:center;z-index:2000}
+.confirm-card{background:#fff;padding:18px;border-radius:12px;max-width:420px;width:100%;box-shadow:0 12px 40px rgba(0,0,0,0.12);text-align:left}
+.confirm-card p.muted{color:var(--muted);margin-top:8px}
+.confirm-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}
+
+/* success message area already uses .form-message.success */
+
+.events .search-row{display:flex;gap:12px;align-items:center;margin:18px auto;max-width:640px;width:100%}
+.events .search-row .search-input{flex:1;margin-right:12px}
+.search-input input{width:100%;padding:10px 12px;border:1px solid #e6e6e6;border-radius:6px;height:40px}
+.events .search-row > div:last-child .btn-primary{height:40px;padding:8px 14px}
+.event-list{max-width:820px;margin:20px auto 60px}
+.event-item{display:flex;gap:16px;align-items:flex-start;background:#fff;padding:18px;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.08);flex-direction:row;border:1px solid #eee}
+.thumb{width:240px;height:200px;border-radius:6px;object-fit:cover}
+.info h4{margin:0 0 6px}
+.cat{display:inline-block;background:rgba(179,58,54,0.08);color:var(--accent);padding:4px 8px;border-radius:6px;font-size:12px;margin-bottom:8px}
+.meta{color:var(--muted);font-size:13px;margin-bottom:6px}
+.desc{margin:0;color:#333}
+.auth-box .btn-primary{display:block;margin:18px auto 8px}
+.auth-box p.muted{margin:0;text-align:center}
+.auth-box label{display:block;margin-bottom:10px;color:#333}
+.auth-box input{width:100%;padding:8px;border:1px solid #e6e6e6;border-radius:6px;margin-top:6px}
+.link-btn{background:none;border:none;color:var(--accent);cursor:pointer;padding:0}
+.auth-box textarea{width:100%;min-height:80px;padding:8px;border:1px solid #e6e6e6;border-radius:6px;margin-top:6px}
+
+@media(max-width:900px){
+  .highlights .grid{grid-template-columns:repeat(2,1fr)}
+  .thumb{width:220px;height:180px}
+  .header-inner{grid-template-columns:1fr 1fr}
+  .nav{grid-column:1/-1;text-align:center}
+  .auth-box{max-width:100%;padding:20px;margin:16px}
+}
+@media(max-width:600px){
+  .header-inner{flex-direction:column;gap:8px}
+  .how .steps{flex-direction:column}
+  .highlights .grid{grid-template-columns:1fr}
+  .auth-box{padding:16px;border-radius:10px}
+}
+
+/* Grid for event list page */
+.event-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 60px;
+}
+
+/* Summary Card for Event List */
+.event-card-summary {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card-summary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.event-card-summary-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.event-card-summary-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Make content fill the card */
+}
+
+.event-card-summary-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.event-card-summary-content .cat {
+  margin-bottom: 0.5rem;
+}
+
+.event-card-summary-content .date {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* For Event Detail Page */
+.event-detail-view {
+  background: #fff;
+  padding: 28px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 24px auto 60px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0;
+}
+
+.event-detail-view-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.event-detail-view-content h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.event-detail-description {
+  margin-top: 2rem;
+  line-height: 1.6;
+}
+
+.event-detail-description h3 {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Event Detail Header */
+.event-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.event-detail-header h1 {
+  margin-bottom: 0;
+}
+
+.comment-icon-btn {
+  position: relative;
+  background: #f5f5f5;
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #555;
+  flex-shrink: 0;
+}
+
+.comment-icon-btn:hover {
+  background: #eee;
+}
+
+.comment-icon-btn svg {
+  stroke: var(--accent);
+}
+
+.comment-count {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Comment Section */
+.comment-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.comment-section h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.comment-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.comment-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.comment-content {
+  flex-grow: 1;
+}
+
+.comment-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.comment-author {
+  font-weight: bold;
+}
+
+.comment-timestamp {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.comment-text {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.comment-form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.comment-form .comment-avatar {
+  flex-shrink: 0;
+}
+
+.comment-input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.comment-submit-btn {
+  margin-top: 0;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+}
+
+.comment-submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Search container for events page */
+.search-container {
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.search-input-field {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input-field:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(179, 58, 54, 0.1);
+}
